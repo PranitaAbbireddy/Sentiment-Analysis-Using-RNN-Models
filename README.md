@@ -10,33 +10,33 @@ Reviews are padded to a uniform length of 400 words for input compatibility.
 
 ## Models Used
 - **Simple RNN**: A basic recurrent neural network model using a single RNN layer.
--**GRU (Gated Recurrent Unit):** A variant of RNN designed to address the vanishing gradient problem.
--**LSTM (Long Short-Term Memory):** A specialized RNN designed to capture long-term dependencies in sequential data.
--**Bidirectional LSTM:** An extension of LSTM that processes the input sequence in both forward and backward directions.
+- **GRU (Gated Recurrent Unit):** A variant of RNN designed to address the vanishing gradient problem.
+- **LSTM (Long Short-Term Memory):** A specialized RNN designed to capture long-term dependencies in sequential data.
+- **Bidirectional LSTM:** An extension of LSTM that processes the input sequence in both forward and backward directions.
 
 ## Features
--**Embedding Layer:**
+- **Embedding Layer:**
 Converts word indices into dense vector representations of a fixed length (32).
--**Sequence Length:**
+- **Sequence Length:**
 All input sequences are padded to a maximum length of 400 words.
--**Output Layer:**
+- **Output Layer:**
 A Dense layer with a sigmoid activation function for binary classification (positive or negative sentiment).
 
 ## Evaluation Metrics
--**Loss Function:** Binary Crossentropy
+- **Loss Function:** Binary Crossentropy
 Measures the difference between predicted and true labels for binary classification.
--**Optimizer:** Adam
+- **Optimizer:** Adam
 Adaptive learning rate optimizer.
--**Metrics:** Accuracy
+- **Metrics:** Accuracy
 Used to evaluate the model's performance on training and test data.
 
 ## Training Details
--**Batch Size:** 64
--**Epochs:** 5
--**Validation:** A subset of the training data (64 samples) was used for validation during training.
--**Preprocessing:**
---Padded sequences ensure uniformity in input length.
---Vocabulary size limited to the 5,000 most frequent words.
+- **Batch Size:** 64
+- **Epochs:** 10
+- **Validation:** A subset of the training data (64 samples) was used for validation during training.
+- **Preprocessing:**
+        - Padded sequences ensure uniformity in input length.
+        - Vocabulary size limited to the 5,000 most frequent words.
 
 ## Conclusion
 The project compares the performance of different RNN architectures in classifying sentiments from movie reviews. Each model has its own strengths:
